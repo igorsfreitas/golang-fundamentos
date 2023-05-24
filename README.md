@@ -6,7 +6,12 @@
 6 - Para criar módulo: go mod init NOME_DO_MODULO
 7 - Para remover dependencias nao utilizadas: go mod tidy
 8 - O go não é uma linguagem orientada a objetos, não tem classes, não tem polimorfismo, não tem herança
-
+9 - Para rodar os testes: go test ./...
+10 - Para rodar os testes no modo verboso: go test -v ./...
+11 - Para verificar a cobertura de testes: go test --cover
+12 - Para gerar relatório com a cobertura de testes: go test --coverprofile resultado.txt ./...
+13 - Para ler o relatório gerado e jogar no terminal: go tool cover --func=resultado.txt
+14 - Gera um html do relatório gerado: go tool cover --html=resultado.txt
 
 DUVIDAS
 

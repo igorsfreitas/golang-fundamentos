@@ -1,0 +1,14 @@
+{
+    "nome": "João",
+    "idade": 25,
+    "cursos": [
+        {
+            "nome": "Engenharia",
+            "duracao": 5
+        },
+        {
+            "nome": "Matemática",
+            "duracao": 4
+        }
+    ]
+}

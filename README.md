@@ -19,3 +19,7 @@ DUVIDAS
 2 - Como fazer upsert no banco, para alterar apenas os dados que recebeu do request
 3 - Como fazer hot reload para desenvolvimento, não precisar ficar reiniciando manualmente
 4 - Migrations no golang ?
+
+<br />
+
+https://awesome-go.com/#database

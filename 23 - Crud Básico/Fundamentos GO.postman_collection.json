@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "3ffb0814-921b-465d-8f98-31ca90572e8a",
+		"name": "Fundamentos GO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1425161"
+	},
+	"item": [
+		{
+			"name": "POST Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Igor\",\n    \"email\": \"igor@teste.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Usuário SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Igor\",\n    \"email\": \"igor@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 18:24:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "Usuário inserido com sucesso! ID: 7"
+				}
+			]
+		},
+		{
+			"name": "GET Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Usuários SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 18:35:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 4,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 5,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 6,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    },\n    {\n        \"id\": 7,\n        \"nome\": \"Igor\",\n        \"email\": \"igor@teste.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Usuário by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/usuarios/6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Usuário by ID SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/usuarios/6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 18:42:06 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"nome\": \"Igor\",\n    \"email\": \"igor@teste.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT Usuário by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Igor Alterado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/usuarios/6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Usuário by ID SUCCESS",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Igor Alterado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/usuarios/6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios",
+								"6"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 18:59:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "DELETE Usuário by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/usuarios/6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE Usuário by ID SUCCESS",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/usuarios/6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios",
+								"6"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 19:03:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

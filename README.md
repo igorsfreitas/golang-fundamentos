@@ -16,4 +16,5 @@
 DUVIDAS
 
 1 - Como fazer injecao / inversão de dependencias no GO se não tem construtor
-2 - Como fazer testes unitários
+2 - Como fazer upsert no banco, para alterar apenas os dados que recebeu do request
+3 -  
